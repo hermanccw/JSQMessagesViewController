@@ -323,9 +323,7 @@
     else if (CGRectContainsPoint(self.messageBubbleContainerView.frame, touchPt)) {
         [self.delegate messagesCollectionViewCellDidTapMessageBubble:self];
     }
-    else {
-        [self.delegate messagesCollectionViewCellDidTapCell:self atPosition:touchPt];
-    }
+    [self.delegate messagesCollectionViewCellDidTapCell:self atPosition:touchPt];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
